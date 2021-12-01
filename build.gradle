@@ -23,11 +23,12 @@ apply plugin: "java"
 
 
 group 'com.dreamfinity.' + {rootProject.name}
-version version
+version project.version
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "idea"
+    replace("@version@": project.version)
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -49,7 +50,6 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-core:2.13.0'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.13.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
-    compile 'org.dreamfinity:bukkit:1.7.10-R0.1:dev'
     compile 'org.dreamfinity:craftbukkit:1.7.10-R0.1:dev'
     implementation 'com.google.code.gson:gson:2.8.8'
 }
