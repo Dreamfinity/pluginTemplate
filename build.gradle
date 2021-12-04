@@ -139,3 +139,4 @@ configure(Patch) {
 configure(JustBuild) {
     group = "Semantic versioned";
     description = "Builds .jar adding '-build-N' suffix and increasing build number: x.y.z-build-N"
+}
